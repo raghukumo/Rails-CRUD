@@ -1,20 +1,101 @@
-<h1>Add new book</h1>
+<link data-require="bootstrap-css@3.3.7" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"/>
+<div class="row">
+<div class="col-md-2"></div> 
+<div class="col-md-6">
 
-<%= form_tag :action => 'create' do %>
-<p><label for = "book_title">Title</label>:
 
-<%= text_field 'books', 'title' %></p>
-<p><label for = "book_price">Price</label>:
+  <h4>Add new book</h4>
+    <%= form_tag :action => 'create' do %>
+    <p><label for = "book_title">Title</label>:
 
-<%= text_field 'books', 'price' %></p>
-<p><label for = "book_subject_id">Subject</label>:
+    <%= text_field 'books', 'title' %></p>
+    <p><label for = "book_price">Price</label>:
 
-<%= collection_select(:books, :subject_id, @subjects, :id, :name, prompt: true) %></p>
-<p><label for = "book_description">Description</label><br/>
+    <%= text_field 'books', 'price' %></p>
+    
+    <div class="dropdown">
+    <data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <p><label for = "book_subject_id">Subject</label>:
 
-<%= text_area 'books', 'description' %></p>
-<%= submit_tag "Create" %>
+    <%= collection_select(:books, :subject_id, @subjects, :id, :name, prompt: true) %></p>
+</button>
+<ul class="dropdown-menu" aria-labelledby="dLabel">
+</ul>
+</div>
+  
+    <p><label for = "book_description">Description</label><br/>
 
+    <%= text_area 'books', 'description' %></p>
+    <%= submit_tag "Create" %>
 <% end -%>
-<%= link_to 'Back', {:action => 'list'} %>
+    <%= link_to 'Back', {:action => 'list'},class: 'btn btn-success' %>
+       
+</div>
+</div>
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css">
+
+
+<script type="text/JavaScript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script type="text/JavaScript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+  Add new Book
+</button>
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Add new Book">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></button>
+         <h4>Add new book</h4>
+    <%= form_tag :action => 'create' do %>
+    <p><label for = "book_title">Title</label>:
+
+    <%= text_field 'books', 'title' %></p>
+    <p><label for = "book_price">Price</label>:
+
+    <%= text_field 'books', 'price' %></p>
+    
+    <div class="dropdown">
+    <data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <p><label for = "book_subject_id">Subject</label>:
+
+    <%= collection_select(:books, :subject_id, @subjects, :id, :name, prompt: true) %></p>
+</button>
+<ul class="dropdown-menu" aria-labelledby="dLabel">
+</ul>
+</div>
+  
+    <p><label for = "book_description">Description</label><br/>
+
+    <%= text_area 'books', 'description' %></p>
+    <%= submit_tag "Create" %>
+<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+<% end -%>
+       
+</div>
+</div>
+ 
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    
 

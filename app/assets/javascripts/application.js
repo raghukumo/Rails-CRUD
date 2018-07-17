@@ -14,3 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require bootstrap-sprockets
+//= require turbolinks <--- get rid of this line
+//= require angular
+//= require angular-route
+//= require angular-rails-templates
+//= require_tree .

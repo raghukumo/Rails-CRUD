@@ -3,7 +3,8 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 
    <head>
-      <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+      <body style="background-color:#B8B8B8;">
+        <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
       <meta http-equiv = "Content-Language" content = "en-us" />
       <title>Library Info System</title>
       <!%= stylesheet_link_tag "style" %>
@@ -13,17 +14,21 @@
       <div id = "container">
          
          <div id = "header">
-            <h1>Library Info System</h1>
-            <h3>Library powered by Ruby on Rails</h3>
-         </div>
-
-         <div id = "content">
-            <%= yield -%>
-         </div>
-
-         <div id = "sidebar"></div>
-         
+<div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <h3>Library Information System</h3>
+        </div>
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
       </div>
+    </div>
+
+
+
+
+       
    </body>
    
 </html>

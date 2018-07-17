@@ -1,4 +1,14 @@
-<h1>Edit Book Detail</h1>
+   <div id = "header">
+<div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <h3>Edit Book Details</h3>
+        </div>
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
 
 <%= form_for @book, :url =>{:action => "update", :id =>@book} do |f| %>
 
@@ -11,6 +21,6 @@
 <%= f.submit "Save changes" %>
 <% end %>
 
-<%= link_to 'Back', {:action => 'list' } %>
+<%= link_to 'Back', {:action => 'list' },class: 'btn btn-primary btn-xs' %>
 
 

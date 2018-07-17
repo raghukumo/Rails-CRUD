@@ -1,3 +1,7 @@
+<link data-require="bootstrap-css@3.3.7" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"/>
+
+<div class="col-md-10">
+
 <h1><%= @book.title %></h1>
 
 <p>
@@ -12,5 +16,8 @@
 
 <hr />
 
-<%= link_to 'Back', {:action => 'list'} %>
+<%= link_to 'Back', {:action => 'list'} ,class: 'btn btn-success'%> 
+
+
+
 
